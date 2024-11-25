@@ -11,8 +11,8 @@
 <channel>
 	<title>
 	Comments for ASPIRE-MWI	</title>
-	<atom:link href="/comments/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../index.html</link>
 	<description>ASPIRE Mental Well-being Intelligence</description>
 	<lastBuildDate>Sun, 24 Nov 2024 11:45:43 +0000</lastBuildDate>
 	<sy:updatePeriod>

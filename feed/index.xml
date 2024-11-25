@@ -12,8 +12,8 @@
 
 <channel>
 	<title>ASPIRE-MWI</title>
-	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../index.html</link>
 	<description>ASPIRE Mental Well-being Intelligence</description>
 	<lastBuildDate>Sun, 24 Nov 2024 11:45:43 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -26,7 +26,7 @@
 <image>
 	<url>https://s0.wp.com/i/webclip.png</url>
 	<title>ASPIRE-MWI</title>
-	<link>/</link>
+	<link>./../index.html</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
