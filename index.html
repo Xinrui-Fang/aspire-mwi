@@ -2,82 +2,6 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <script>
-      (() => {
-        var e = {};
-        (e.g = (function () {
-          if ("object" == typeof globalThis) return globalThis;
-          try {
-            return this || new Function("return this")();
-          } catch (e) {
-            if ("object" == typeof window) return window;
-          }
-        })()),
-          (function ({
-            ampUrl: n,
-            isCustomizePreview: t,
-            isAmpDevMode: r,
-            noampQueryVarName: o,
-            noampQueryVarValue: s,
-            disabledStorageKey: i,
-            mobileUserAgents: a,
-            regexRegex: c,
-          }) {
-            if ("undefined" == typeof sessionStorage) return;
-            const d = new RegExp(c);
-            if (
-              !a.some((e) => {
-                const n = e.match(d);
-                return (
-                  !(!n || !new RegExp(n[1], n[2]).test(navigator.userAgent)) ||
-                  navigator.userAgent.includes(e)
-                );
-              })
-            )
-              return;
-            e.g.addEventListener("DOMContentLoaded", () => {
-              const e = document.getElementById("amp-mobile-version-switcher");
-              if (!e) return;
-              e.hidden = !1;
-              const n = e.querySelector("a[href]");
-              n &&
-                n.addEventListener("click", () => {
-                  sessionStorage.removeItem(i);
-                });
-            });
-            const g =
-              r &&
-              ["paired-browsing-non-amp", "paired-browsing-amp"].includes(
-                window.name
-              );
-            if (sessionStorage.getItem(i) || t || g) return;
-            const u = new URL(location.href),
-              m = new URL(n);
-            (m.hash = u.hash),
-              u.searchParams.has(o) && s === u.searchParams.get(o)
-                ? sessionStorage.setItem(i, "1")
-                : m.href !== u.href &&
-                  (window.stop(), location.replace(m.href));
-          })({
-            ampUrl: ".\/\/team\/?simply_static_page=518&amp=1",
-            noampQueryVarName: "noamp",
-            noampQueryVarValue: "mobile",
-            disabledStorageKey: "amp_mobile_redirect_disabled",
-            mobileUserAgents: [
-              "Mobile",
-              "Android",
-              "Silk\/",
-              "Kindle",
-              "BlackBerry",
-              "Opera Mini",
-              "Opera Mobi",
-            ],
-            regexRegex: "^\\\/((?:.|\\n)+)\\\/([i]*)$",
-            isCustomizePreview: false,
-            isAmpDevMode: false,
-          });
-      })();
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="max-image-preview:large" />
     <style>
@@ -85,7 +9,7 @@
         contain-intrinsic-size: 3000px 1500px;
       }
     </style>
-    <title>Team &#8211; ASPIRE-MWI</title>
+    <title>ASPIRE-MWI &#8211; ASPIRE Mental Well-being Intelligence</title>
     <link rel="dns-prefetch" href="//secure.gravatar.com" />
     <link rel="dns-prefetch" href="//stats.wp.com" />
     <link rel="dns-prefetch" href="//widgets.wp.com" />
@@ -101,13 +25,13 @@
       rel="alternate"
       type="application/rss+xml"
       title="ASPIRE-MWI &raquo; Feed"
-      href="./../feed/index.html"
+      href="./feed/index.html"
     />
     <link
       rel="alternate"
       type="application/rss+xml"
       title="ASPIRE-MWI &raquo; Comments Feed"
-      href="./../comments/feed/index.html"
+      href="./comments/feed/index.html"
     />
     <script>
       window._wpemojiSettings = {
@@ -255,8 +179,8 @@
     </script>
     <link
       rel="stylesheet"
-      id="all-css-ba7804be28409bf9ac46059595fdb89a"
-      href="../styles.css"
+      id="all-css-1f4ed0763c2177e8a42b2b59c99117c3"
+      href="./styles.css"
       type="text/css"
       media="all"
     />
@@ -287,141 +211,9 @@
         text-transform: uppercase;
       }
     </style>
-    <style id="wp-block-post-title-inline-css">
-      .wp-block-post-title {
-        box-sizing: border-box;
-        word-break: break-word;
-      }
-      .wp-block-post-title :where(a) {
-        display: inline-block;
-        font-family: inherit;
-        font-size: inherit;
-        font-style: inherit;
-        font-weight: inherit;
-        letter-spacing: inherit;
-        line-height: inherit;
-        text-decoration: inherit;
-      }
-    </style>
-    <style id="wp-block-post-featured-image-inline-css">
-      .wp-block-post-featured-image {
-        margin-left: 0;
-        margin-right: 0;
-      }
-      .wp-block-post-featured-image a {
-        display: block;
-        height: 100%;
-      }
-      .wp-block-post-featured-image :where(img) {
-        box-sizing: border-box;
-        height: auto;
-        max-width: 100%;
-        vertical-align: bottom;
-        width: 100%;
-      }
-      .wp-block-post-featured-image.alignfull img,
-      .wp-block-post-featured-image.alignwide img {
-        width: 100%;
-      }
-      .wp-block-post-featured-image
-        .wp-block-post-featured-image__overlay.has-background-dim {
-        background-color: #000;
-        inset: 0;
-        position: absolute;
-      }
-      .wp-block-post-featured-image {
-        position: relative;
-      }
-      .wp-block-post-featured-image
-        .wp-block-post-featured-image__overlay.has-background-gradient {
-        background-color: initial;
-      }
-      .wp-block-post-featured-image
-        .wp-block-post-featured-image__overlay.has-background-dim-0 {
-        opacity: 0;
-      }
-      .wp-block-post-featured-image
-        .wp-block-post-featured-image__overlay.has-background-dim-10 {
-        opacity: 0.1;
-      }
-      .wp-block-post-featured-image
-        .wp-block-post-featured-image__overlay.has-background-dim-20 {
-        opacity: 0.2;
-      }
-      .wp-block-post-featured-image
-        .wp-block-post-featured-image__overlay.has-background-dim-30 {
-        opacity: 0.3;
-      }
-      .wp-block-post-featured-image
-        .wp-block-post-featured-image__overlay.has-background-dim-40 {
-        opacity: 0.4;
-      }
-      .wp-block-post-featured-image
-        .wp-block-post-featured-image__overlay.has-background-dim-50 {
-        opacity: 0.5;
-      }
-      .wp-block-post-featured-image
-        .wp-block-post-featured-image__overlay.has-background-dim-60 {
-        opacity: 0.6;
-      }
-      .wp-block-post-featured-image
-        .wp-block-post-featured-image__overlay.has-background-dim-70 {
-        opacity: 0.7;
-      }
-      .wp-block-post-featured-image
-        .wp-block-post-featured-image__overlay.has-background-dim-80 {
-        opacity: 0.8;
-      }
-      .wp-block-post-featured-image
-        .wp-block-post-featured-image__overlay.has-background-dim-90 {
-        opacity: 0.9;
-      }
-      .wp-block-post-featured-image
-        .wp-block-post-featured-image__overlay.has-background-dim-100 {
-        opacity: 1;
-      }
-      .wp-block-post-featured-image:where(.alignleft, .alignright) {
-        width: 100%;
-      }
-    </style>
-    <style id="wp-block-paragraph-inline-css">
-      .is-small-text {
-        font-size: 0.875em;
-      }
-      .is-regular-text {
-        font-size: 1em;
-      }
-      .is-large-text {
-        font-size: 2.25em;
-      }
-      .is-larger-text {
-        font-size: 3em;
-      }
-      .has-drop-cap:not(:focus):first-letter {
-        float: left;
-        font-size: 8.4em;
-        font-style: normal;
-        font-weight: 100;
-        line-height: 0.68;
-        margin: 0.05em 0.1em 0 0;
-        text-transform: uppercase;
-      }
-      body.rtl .has-drop-cap:not(:focus):first-letter {
-        float: none;
-        margin-left: 0.1em;
-      }
-      p.has-drop-cap.has-background {
-        overflow: hidden;
-      }
-      :root :where(p.has-background) {
-        padding: 1.25em 2.375em;
-      }
-      :where(p.has-text-color:not(.has-link-color)) a {
-        color: inherit;
-      }
-      p.has-text-align-left[style*="writing-mode:vertical-lr"],
-      p.has-text-align-right[style*="writing-mode:vertical-rl"] {
-        rotate: 180deg;
+    <style id="wp-block-spacer-inline-css">
+      .wp-block-spacer {
+        clear: both;
       }
     </style>
     <style id="wp-block-heading-inline-css">
@@ -472,9 +264,145 @@
         rotate: 180deg;
       }
     </style>
-    <style id="wp-block-spacer-inline-css">
-      .wp-block-spacer {
-        clear: both;
+    <style id="wp-block-paragraph-inline-css">
+      .is-small-text {
+        font-size: 0.875em;
+      }
+      .is-regular-text {
+        font-size: 1em;
+      }
+      .is-large-text {
+        font-size: 2.25em;
+      }
+      .is-larger-text {
+        font-size: 3em;
+      }
+      .has-drop-cap:not(:focus):first-letter {
+        float: left;
+        font-size: 8.4em;
+        font-style: normal;
+        font-weight: 100;
+        line-height: 0.68;
+        margin: 0.05em 0.1em 0 0;
+        text-transform: uppercase;
+      }
+      body.rtl .has-drop-cap:not(:focus):first-letter {
+        float: none;
+        margin-left: 0.1em;
+      }
+      p.has-drop-cap.has-background {
+        overflow: hidden;
+      }
+      :root :where(p.has-background) {
+        padding: 1.25em 2.375em;
+      }
+      :where(p.has-text-color:not(.has-link-color)) a {
+        color: inherit;
+      }
+      p.has-text-align-left[style*="writing-mode:vertical-lr"],
+      p.has-text-align-right[style*="writing-mode:vertical-rl"] {
+        rotate: 180deg;
+      }
+    </style>
+    <style id="wp-block-columns-inline-css">
+      .wp-block-columns {
+        align-items: normal !important;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap !important;
+      }
+      @media (min-width: 782px) {
+        .wp-block-columns {
+          flex-wrap: nowrap !important;
+        }
+      }
+      .wp-block-columns.are-vertically-aligned-top {
+        align-items: flex-start;
+      }
+      .wp-block-columns.are-vertically-aligned-center {
+        align-items: center;
+      }
+      .wp-block-columns.are-vertically-aligned-bottom {
+        align-items: flex-end;
+      }
+      @media (max-width: 781px) {
+        .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+          flex-basis: 100% !important;
+        }
+      }
+      @media (min-width: 782px) {
+        .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+          flex-basis: 0;
+          flex-grow: 1;
+        }
+        .wp-block-columns:not(.is-not-stacked-on-mobile)
+          > .wp-block-column[style*="flex-basis"] {
+          flex-grow: 0;
+        }
+      }
+      .wp-block-columns.is-not-stacked-on-mobile {
+        flex-wrap: nowrap !important;
+      }
+      .wp-block-columns.is-not-stacked-on-mobile > .wp-block-column {
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+      .wp-block-columns.is-not-stacked-on-mobile
+        > .wp-block-column[style*="flex-basis"] {
+        flex-grow: 0;
+      }
+      :where(.wp-block-columns) {
+        margin-bottom: 1.75em;
+      }
+      :where(.wp-block-columns.has-background) {
+        padding: 1.25em 2.375em;
+      }
+      .wp-block-column {
+        flex-grow: 1;
+        min-width: 0;
+        overflow-wrap: break-word;
+        word-break: break-word;
+      }
+      .wp-block-column.is-vertically-aligned-top {
+        align-self: flex-start;
+      }
+      .wp-block-column.is-vertically-aligned-center {
+        align-self: center;
+      }
+      .wp-block-column.is-vertically-aligned-bottom {
+        align-self: flex-end;
+      }
+      .wp-block-column.is-vertically-aligned-stretch {
+        align-self: stretch;
+      }
+      .wp-block-column.is-vertically-aligned-bottom,
+      .wp-block-column.is-vertically-aligned-center,
+      .wp-block-column.is-vertically-aligned-top {
+        width: 100%;
+      }
+    </style>
+    <style id="wp-block-separator-inline-css">
+      @charset "UTF-8";
+      .wp-block-separator {
+        border: none;
+        border-top: 2px solid;
+      }
+      :root :where(.wp-block-separator.is-style-dots) {
+        height: auto;
+        line-height: 1;
+        text-align: center;
+      }
+      :root :where(.wp-block-separator.is-style-dots):before {
+        color: currentColor;
+        content: "···";
+        font-family: serif;
+        font-size: 1.5em;
+        letter-spacing: 2em;
+        padding-left: 2em;
+      }
+      .wp-block-separator.is-style-dots {
+        background: none !important;
+        border: none !important;
       }
     </style>
     <style id="wp-block-image-inline-css">
@@ -815,86 +743,67 @@
         }
       }
     </style>
-    <style id="wp-block-columns-inline-css">
-      .wp-block-columns {
-        align-items: normal !important;
-        box-sizing: border-box;
+    <style id="wp-block-post-template-inline-css">
+      .wp-block-post-template {
+        list-style: none;
+        margin-bottom: 0;
+        margin-top: 0;
+        max-width: 100%;
+        padding: 0;
+      }
+      .wp-block-post-template.is-flex-container {
         display: flex;
-        flex-wrap: wrap !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.25em;
       }
-      @media (min-width: 782px) {
-        .wp-block-columns {
-          flex-wrap: nowrap !important;
-        }
-      }
-      .wp-block-columns.are-vertically-aligned-top {
-        align-items: flex-start;
-      }
-      .wp-block-columns.are-vertically-aligned-center {
-        align-items: center;
-      }
-      .wp-block-columns.are-vertically-aligned-bottom {
-        align-items: flex-end;
-      }
-      @media (max-width: 781px) {
-        .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
-          flex-basis: 100% !important;
-        }
-      }
-      @media (min-width: 782px) {
-        .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
-          flex-basis: 0;
-          flex-grow: 1;
-        }
-        .wp-block-columns:not(.is-not-stacked-on-mobile)
-          > .wp-block-column[style*="flex-basis"] {
-          flex-grow: 0;
-        }
-      }
-      .wp-block-columns.is-not-stacked-on-mobile {
-        flex-wrap: nowrap !important;
-      }
-      .wp-block-columns.is-not-stacked-on-mobile > .wp-block-column {
-        flex-basis: 0;
-        flex-grow: 1;
-      }
-      .wp-block-columns.is-not-stacked-on-mobile
-        > .wp-block-column[style*="flex-basis"] {
-        flex-grow: 0;
-      }
-      :where(.wp-block-columns) {
-        margin-bottom: 1.75em;
-      }
-      :where(.wp-block-columns.has-background) {
-        padding: 1.25em 2.375em;
-      }
-      .wp-block-column {
-        flex-grow: 1;
-        min-width: 0;
-        overflow-wrap: break-word;
-        word-break: break-word;
-      }
-      .wp-block-column.is-vertically-aligned-top {
-        align-self: flex-start;
-      }
-      .wp-block-column.is-vertically-aligned-center {
-        align-self: center;
-      }
-      .wp-block-column.is-vertically-aligned-bottom {
-        align-self: flex-end;
-      }
-      .wp-block-column.is-vertically-aligned-stretch {
-        align-self: stretch;
-      }
-      .wp-block-column.is-vertically-aligned-bottom,
-      .wp-block-column.is-vertically-aligned-center,
-      .wp-block-column.is-vertically-aligned-top {
+      .wp-block-post-template.is-flex-container > li {
+        margin: 0;
         width: 100%;
       }
-    </style>
-    <style id="wp-block-post-content-inline-css">
-      .wp-block-post-content {
-        display: flow-root;
+      @media (min-width: 600px) {
+        .wp-block-post-template.is-flex-container.is-flex-container.columns-2
+          > li {
+          width: calc(50% - 0.625em);
+        }
+        .wp-block-post-template.is-flex-container.is-flex-container.columns-3
+          > li {
+          width: calc(33.33333% - 0.83333em);
+        }
+        .wp-block-post-template.is-flex-container.is-flex-container.columns-4
+          > li {
+          width: calc(25% - 0.9375em);
+        }
+        .wp-block-post-template.is-flex-container.is-flex-container.columns-5
+          > li {
+          width: calc(20% - 1em);
+        }
+        .wp-block-post-template.is-flex-container.is-flex-container.columns-6
+          > li {
+          width: calc(16.66667% - 1.04167em);
+        }
+      }
+      @media (max-width: 600px) {
+        .wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .wp-block-post-template-is-layout-constrained > li > .alignright,
+      .wp-block-post-template-is-layout-flow > li > .alignright {
+        float: right;
+        margin-inline-end: 0;
+        margin-inline-start: 2em;
+      }
+      .wp-block-post-template-is-layout-constrained > li > .alignleft,
+      .wp-block-post-template-is-layout-flow > li > .alignleft {
+        float: left;
+        margin-inline-end: 2em;
+        margin-inline-start: 0;
+      }
+      .wp-block-post-template-is-layout-constrained > li > .aligncenter,
+      .wp-block-post-template-is-layout-flow > li > .aligncenter {
+        margin-inline-end: auto;
+        margin-inline-start: auto;
       }
     </style>
     <style id="wp-emoji-styles-inline-css">
@@ -1995,18 +1904,11 @@
         :where(.wp-block-navigation a:where(:not(.wp-element-button)):hover) {
         text-decoration: underline;
       }
-      :root :where(.wp-block-post-title) {
-        color: var(--wp--preset--color--primary);
-        margin-bottom: 0;
-      }
-      :root :where(.wp-block-post-title a:where(:not(.wp-element-button))) {
-        color: var(--wp--preset--color--primary);
-        text-decoration: none;
-      }
-      :root
-        :where(.wp-block-post-title a:where(:not(.wp-element-button)):hover) {
-        color: var(--wp--preset--color--secondary);
-        text-decoration: underline;
+      :root :where(.wp-block-separator) {
+        border-color: currentColor;
+        border-width: 0 0 1px 0;
+        border-style: solid;
+        color: var(--wp--preset--color--foreground);
       }
     </style>
     <style id="core-block-supports-inline-css">
@@ -2028,132 +1930,92 @@
       .wp-container-core-group-is-layout-4 {
         justify-content: space-between;
       }
-      .wp-container-3 {
-        top: calc(0px + var(--wp-admin--admin-bar--position-offset, 0px));
-        position: sticky;
-        z-index: 10;
+      .wp-elements-8d66ace13def4e04ba854259024830a6
+        a:where(:not(.wp-element-button)) {
+        color: #fefefe;
+      }
+      .wp-elements-bbaeefd8db57b53d671beb905b88968d
+        a:where(:not(.wp-element-button)) {
+        color: #fefefe;
+      }
+      .wp-container-core-group-is-layout-7
+        > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+        max-width: 1200px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .wp-container-core-group-is-layout-7 > .alignwide {
+        max-width: 1200px;
+      }
+      .wp-container-core-group-is-layout-7 .alignfull {
+        max-width: none;
+      }
+      .wp-container-core-group-is-layout-7 > .alignfull {
+        margin-right: calc(0px * -1);
+        margin-left: calc(0px * -1);
       }
       .wp-container-core-group-is-layout-7 > * {
         margin-block-start: 0;
         margin-block-end: 0;
       }
       .wp-container-core-group-is-layout-7 > * + * {
-        margin-block-start: 4px;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-9 > * {
         margin-block-start: 0;
         margin-block-end: 0;
       }
-      .wp-container-core-group-is-layout-9 > * + * {
-        margin-block-start: 4px;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-11 > * {
+      .wp-container-core-column-is-layout-1 > * {
         margin-block-start: 0;
         margin-block-end: 0;
       }
-      .wp-container-core-group-is-layout-11 > * + * {
-        margin-block-start: 4px;
+      .wp-container-core-column-is-layout-1 > * + * {
+        margin-block-start: var(--wp--preset--spacing--20);
         margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-13 > * {
-        margin-block-start: 0;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-13 > * + * {
-        margin-block-start: 4px;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-15 > * {
-        margin-block-start: 0;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-15 > * + * {
-        margin-block-start: 4px;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-17 {
-        grid-template-columns: repeat(auto-fill, minmax(min(12rem, 100%), 1fr));
-        container-type: inline-size;
-        gap: var(--wp--preset--spacing--30);
       }
       .wp-container-core-columns-is-layout-1 {
         flex-wrap: nowrap;
       }
-      .wp-container-core-group-is-layout-19 > * {
+      .wp-container-core-column-is-layout-3 > * {
         margin-block-start: 0;
         margin-block-end: 0;
       }
-      .wp-container-core-group-is-layout-19 > * + * {
-        margin-block-start: 4px;
+      .wp-container-core-column-is-layout-3 > * + * {
+        margin-block-start: var(--wp--preset--spacing--20);
         margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-21 > * {
-        margin-block-start: 0;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-21 > * + * {
-        margin-block-start: 4px;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-23 > * {
-        margin-block-start: 0;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-23 > * + * {
-        margin-block-start: 4px;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-25 > * {
-        margin-block-start: 0;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-25 > * + * {
-        margin-block-start: 4px;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-27 > * {
-        margin-block-start: 0;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-27 > * + * {
-        margin-block-start: 4px;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-29 {
-        grid-template-columns: repeat(auto-fill, minmax(min(12rem, 100%), 1fr));
-        container-type: inline-size;
-        gap: var(--wp--preset--spacing--30);
-      }
-      .wp-container-core-group-is-layout-30 > * {
-        margin-block-start: 0;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-30 > * + * {
-        margin-block-start: 4px;
-        margin-block-end: 0;
-      }
-      .wp-container-core-group-is-layout-32 {
-        grid-template-columns: repeat(auto-fill, minmax(min(12rem, 100%), 1fr));
-        container-type: inline-size;
-        gap: var(--wp--preset--spacing--30);
       }
       .wp-container-core-columns-is-layout-2 {
         flex-wrap: nowrap;
       }
-      .wp-container-core-group-is-layout-34 > .alignfull {
+      .wp-container-core-columns-is-layout-3 {
+        flex-wrap: nowrap;
+      }
+      .wp-container-core-group-is-layout-10
+        > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+        max-width: 1200px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .wp-container-core-group-is-layout-10 > .alignwide {
+        max-width: 1200px;
+      }
+      .wp-container-core-group-is-layout-10 .alignfull {
+        max-width: none;
+      }
+      .wp-container-core-group-is-layout-10 > .alignfull {
         margin-right: calc(40px * -1);
         margin-left: calc(40px * -1);
       }
-      .wp-container-core-group-is-layout-35 > .alignfull {
-        margin-right: calc(40px * -1);
-        margin-left: calc(40px * -1);
+      .wp-container-core-group-is-layout-10 > * {
+        margin-block-start: 0;
+        margin-block-end: 0;
       }
-      .wp-container-core-social-links-is-layout-1 {
-        justify-content: center;
+      .wp-container-core-group-is-layout-10 > * + * {
+        margin-block-start: 4rem;
+        margin-block-end: 0;
       }
-      .wp-container-core-group-is-layout-37 > .alignfull {
+      .wp-container-core-columns-is-layout-4
+        > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+        margin-left: 0 !important;
+      }
+      .wp-container-core-group-is-layout-11 > .alignfull {
         margin-right: calc(
           var(
               --wp--style--root--padding-right,
@@ -2167,7 +2029,24 @@
             ) * -1
         );
       }
-      .wp-container-core-group-is-layout-38 > .alignfull {
+      .wp-container-core-social-links-is-layout-1 {
+        justify-content: center;
+      }
+      .wp-container-core-group-is-layout-13 > .alignfull {
+        margin-right: calc(
+          var(
+              --wp--style--root--padding-right,
+              var(--wp--custom--gap--horizontal)
+            ) * -1
+        );
+        margin-left: calc(
+          var(
+              --wp--style--root--padding-left,
+              var(--wp--custom--gap--horizontal)
+            ) * -1
+        );
+      }
+      .wp-container-core-group-is-layout-14 > .alignfull {
         margin-right: calc(40px * -1);
         margin-left: calc(40px * -1);
       }
@@ -2188,34 +2067,15 @@
           ".\/\/wp-content\/mu-plugins\/wpcomsh\/vendor\/automattic\/jetpack-mu-wpcom\/src\/build\/",
       };
     </script>
-    <link rel="https://api.w.org/" href="./../wp-json/index.html" />
-    <link
-      rel="alternate"
-      title="JSON"
-      type="application/json"
-      href="./../wp-json/wp/v2/pages/53/index.html"
-    />
+    <link rel="https://api.w.org/" href="./wp-json/index.html" />
     <link
       rel="EditURI"
       type="application/rsd+xml"
       title="RSD"
-      href="./../xmlrpc.php?rsd"
+      href="./xmlrpc.php?rsd"
     />
 
-    <link rel="canonical" href="./index.html" />
-    <link rel="shortlink" href="https://wp.me/Pg7SqB-R" />
-    <link
-      rel="alternate"
-      title="oEmbed (JSON)"
-      type="application/json+oembed"
-      href="./../wp-json/oembed/1.0/embed/index.html?url=https%3A%2F%2F%2Fteam%2F"
-    />
-    <link
-      rel="alternate"
-      title="oEmbed (XML)"
-      type="text/xml+oembed"
-      href="./../wp-json/oembed/1.0/embed/index.html?url=https%3A%2F%2F%2Fteam%2F#038;format=xml"
-    />
+    <link rel="shortlink" href="https://wp.me/g7SqB" />
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const randomImages = [
@@ -2234,12 +2094,6 @@
         });
       });
     </script>
-    <link
-      rel="alternate"
-      type="text/html"
-      media="only screen and (max-width: 640px)"
-      href="./index.html#038;amp=1"
-    />
     <style>
       img#wpstats {
         display: none;
@@ -2254,78 +2108,28 @@
     </script>
     <script
       type="module"
-      src="./../wp-content/plugins/gutenberg/build-module/block-library/navigation/view.min.js?ver=7b370e821516feba4955"
+      src="./wp-content/plugins/gutenberg/build-module/block-library/navigation/view.min.js?ver=7b370e821516feba4955"
       id="@wordpress/block-library/navigation/view-js-module"
     ></script>
     <link
       rel="modulepreload"
-      href="./../wp-content/plugins/gutenberg/build-module/interactivity/index.min.js?ver=bf88c916a30d8c6a2780"
+      href="./wp-content/plugins/gutenberg/build-module/interactivity/index.min.js?ver=bf88c916a30d8c6a2780"
       id="@wordpress/interactivity-js-modulepreload"
     />
-    <meta
-      name="description"
-      content="Diversity is our pride. Our team holds a broad range of expertise to drive Mental Well-being Intelligence research: human-AI interaction, mental health technology, communication support, XR, ELSI, mobile systems, large-scale system deployment, machine learning theory, psychology. 多様性は私たちの誇りです．私たちのチームは、Mental Well-being Intelligence研究を推進するために多様な専門知識を兼ね備えています。特に、人間・AI協調（human-AI interaction）、メンタルヘルス技術、コミュニケーション支援、XR、ELSI、モバイルシステム、大規模なシステム実証、機械学習理論、心理学といった分野の専門性が集結しています。 Japan Principal Investigators Koji Yatani / 矢谷 浩司 The University of Tokyo / 東京大学 Mari&hellip;"
-    />
-    <link rel="amphtml" href="./index.html#038;amp=1" />
-    <style>
-      #amp-mobile-version-switcher {
-        left: 0;
-        position: absolute;
-        width: 100%;
-        z-index: 100;
-      }
-      #amp-mobile-version-switcher > a {
-        background-color: #444;
-        border: 0;
-        color: #eaeaea;
-        display: block;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-          Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-        padding: 15px 0;
-        text-align: center;
-        -webkit-text-decoration: none;
-        text-decoration: none;
-      }
-      #amp-mobile-version-switcher > a:active,
-      #amp-mobile-version-switcher > a:focus,
-      #amp-mobile-version-switcher > a:hover {
-        -webkit-text-decoration: underline;
-        text-decoration: underline;
-      }
-    </style>
+    <meta name="description" content="ASPIRE Mental Well-being Intelligence" />
+    <!-- There is no amphtml version available for this URL. -->
     <!-- Jetpack Open Graph Tags -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Team" />
-    <meta property="og:url" content="./index.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ASPIRE-MWI" />
     <meta
       property="og:description"
-      content="Diversity is our pride. Our team holds a broad range of expertise to drive Mental Well-being Intelligence research: human-AI interaction, mental health technology, communication support, XR, ELSI, …"
+      content="ASPIRE Mental Well-being Intelligence"
     />
-    <meta
-      property="article:published_time"
-      content="2024-11-13T08:29:36+00:00"
-    />
-    <meta
-      property="article:modified_time"
-      content="2024-11-24T10:05:54+00:00"
-    />
+    <meta property="og:url" content="./index.html" />
     <meta property="og:site_name" content="ASPIRE-MWI" />
-    <meta
-      property="og:image"
-      content="./../wp-content/uploads/2024/11/AdobeStock_632706537.png"
-    />
-    <meta property="og:image:width" content="3873" />
-    <meta property="og:image:height" content="3873" />
+    <meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
     <meta property="og:image:alt" />
     <meta property="og:locale" content="en_US" />
-    <meta name="twitter:text:title" content="Team" />
-    <meta
-      name="twitter:image"
-      content="./../wp-content/uploads/2024/11/AdobeStock_632706537.png?w=640"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
 
     <!-- End Jetpack Open Graph Tags -->
     <style class="wp-fonts-local">
@@ -2534,7 +2338,7 @@
         font-style: normal;
         font-weight: 700;
         font-display: fallback;
-        src: url("./../wp-content/themes/smithland/assets/fonts/inter_normal_700.ttf")
+        src: url("./wp-content/themes/smithland/assets/fonts/inter_normal_700.ttf")
           format("truetype");
       }
       @font-face {
@@ -2542,7 +2346,7 @@
         font-style: normal;
         font-weight: 500;
         font-display: fallback;
-        src: url("./../wp-content/themes/smithland/assets/fonts/inter_normal_500.ttf")
+        src: url("./wp-content/themes/smithland/assets/fonts/inter_normal_500.ttf")
           format("truetype");
       }
       @font-face {
@@ -2550,7 +2354,7 @@
         font-style: normal;
         font-weight: 600;
         font-display: fallback;
-        src: url("./../wp-content/themes/smithland/assets/fonts/inter_normal_600.ttf")
+        src: url("./wp-content/themes/smithland/assets/fonts/inter_normal_600.ttf")
           format("truetype");
       }
       @font-face {
@@ -2558,7 +2362,7 @@
         font-style: normal;
         font-weight: 400;
         font-display: fallback;
-        src: url("./../wp-content/themes/smithland/assets/fonts/inter_normal_400.ttf")
+        src: url("./wp-content/themes/smithland/assets/fonts/inter_normal_400.ttf")
           format("truetype");
       }
       @font-face {
@@ -2566,7 +2370,7 @@
         font-style: normal;
         font-weight: 500;
         font-display: fallback;
-        src: url("./../wp-content/themes/smithland/assets/fonts/literata_normal_500.ttf")
+        src: url("./wp-content/themes/smithland/assets/fonts/literata_normal_500.ttf")
           format("truetype");
       }
       @font-face {
@@ -2574,7 +2378,7 @@
         font-style: italic;
         font-weight: 500;
         font-display: fallback;
-        src: url("./../wp-content/themes/smithland/assets/fonts/literata_italic_500.ttf")
+        src: url("./wp-content/themes/smithland/assets/fonts/literata_italic_500.ttf")
           format("truetype");
       }
       @font-face {
@@ -2582,7 +2386,7 @@
         font-style: italic;
         font-weight: 400;
         font-display: fallback;
-        src: url("./../wp-content/themes/smithland/assets/fonts/literata_italic_400.ttf")
+        src: url("./wp-content/themes/smithland/assets/fonts/literata_italic_400.ttf")
           format("truetype");
       }
       @font-face {
@@ -2590,7 +2394,7 @@
         font-style: normal;
         font-weight: 400;
         font-display: fallback;
-        src: url("./../wp-content/themes/smithland/assets/fonts/literata_normal_400.ttf")
+        src: url("./wp-content/themes/smithland/assets/fonts/literata_normal_400.ttf")
           format("truetype");
       }
     </style>
@@ -2615,12 +2419,10 @@
     </style>
   </head>
 
-  <body
-    class="page-template-default page page-id-53 wp-custom-logo wp-embed-responsive"
-  >
+  <body class="home blog wp-custom-logo wp-embed-responsive">
     <div class="wp-site-blocks">
       <div
-        class="wp-block-group is-layout-flow wp-block-group-is-layout-flow wp-container-3 is-position-sticky"
+        class="wp-block-group is-layout-flow wp-block-group-is-layout-flow"
         style="
           border-top-color: var(--wp--preset--color--secondary);
           border-top-style: solid;
@@ -2725,12 +2527,11 @@
                             class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation"
                           >
                             <li
-                              class="wp-block-navigation-item current-menu-item wp-block-navigation-link"
+                              class="wp-block-navigation-item wp-block-navigation-link"
                             >
                               <a
                                 class="wp-block-navigation-item__content"
-                                href="./index.html"
-                                aria-current="page"
+                                href="./team/index.html"
                                 ><span class="wp-block-navigation-item__label"
                                   >Team</span
                                 ></a
@@ -2741,7 +2542,7 @@
                             >
                               <a
                                 class="wp-block-navigation-item__content"
-                                href="./../projects/index.html"
+                                href="./projects/index.html"
                                 ><span class="wp-block-navigation-item__label"
                                   >Projects</span
                                 ></a
@@ -2752,7 +2553,7 @@
                             >
                               <a
                                 class="wp-block-navigation-item__content"
-                                href="./../mwi-vision-talks/index.html"
+                                href="./mwi-vision-talks/index.html"
                                 ><span class="wp-block-navigation-item__label"
                                   >MWI Vision Lectures</span
                                 ></a
@@ -2763,7 +2564,7 @@
                             >
                               <a
                                 class="wp-block-navigation-item__content"
-                                href="./../events/index.html"
+                                href="./events/index.html"
                                 ><span class="wp-block-navigation-item__label"
                                   >Events</span
                                 ></a
@@ -2782,965 +2583,579 @@
       </div>
 
       <div
-        class="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-35 wp-block-group-is-layout-constrained"
-        style="padding-right: 40px; padding-left: 40px"
+        class="wp-block-cover alignwide is-light is-style-default"
+        style="
+          padding-top: var(--wp--preset--spacing--70);
+          padding-right: var(--wp--preset--spacing--50);
+          padding-bottom: var(--wp--preset--spacing--70);
+          padding-left: var(--wp--preset--spacing--50);
+        "
       >
-        <h2
-          style="padding-top: 60px; padding-bottom: 20px"
-          class="wp-block-post-title"
-        >
-          Team
-        </h2>
-
+        <span
+          aria-hidden="true"
+          class="wp-block-cover__background has-background-dim-60 has-background-dim"
+          style="background-color: #6f6f67"
+        ></span
+        ><img
+          width="7258"
+          height="2890"
+          class="wp-block-cover__image-background wp-image-313 size-full"
+          alt=""
+          src="./wp-content/uploads/2024/11/AdobeStock_749315491.jpeg"
+          data-object-fit="cover"
+          srcset="
+            https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_749315491.jpeg?w=7258&amp;ssl=1            7258w,
+            https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_749315491.jpeg?resize=300%2C119&amp;ssl=1   300w,
+            https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_749315491.jpeg?resize=1024%2C408&amp;ssl=1 1024w,
+            https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_749315491.jpeg?resize=768%2C306&amp;ssl=1   768w,
+            https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_749315491.jpeg?resize=1536%2C612&amp;ssl=1 1536w,
+            https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_749315491.jpeg?resize=2048%2C815&amp;ssl=1 2048w,
+            https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_749315491.jpeg?resize=1200%2C478&amp;ssl=1 1200w,
+            https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_749315491.jpeg?w=3000&amp;ssl=1            3000w
+          "
+          sizes="(max-width: 7258px) 100vw, 7258px"
+        />
         <div
-          class="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-34 wp-block-group-is-layout-constrained"
-          style="padding-right: 40px; padding-left: 40px"
+          class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow"
         >
           <div
-            class="entry-content alignfull wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained"
+            style="height: var(--wp--preset--spacing--70)"
+            aria-hidden="true"
+            class="wp-block-spacer"
+          ></div>
+
+          <div
+            class="wp-block-group alignwide is-style-default has-global-padding is-layout-constrained wp-container-core-group-is-layout-7 wp-block-group-is-layout-constrained"
+            style="
+              margin-top: 0;
+              margin-bottom: 0;
+              padding-top: 0;
+              padding-right: 0;
+              padding-bottom: 0;
+              padding-left: 0;
+            "
           >
-            <p></p>
-
-            <p>
-              Diversity is our pride. Our team holds a broad range of expertise
-              to drive Mental Well-being Intelligence research: human-AI
-              interaction, mental health technology, communication support, XR,
-              ELSI, mobile systems, large-scale system deployment, machine
-              learning theory, psychology.
-            </p>
-
-            <p>
-              多様性は私たちの誇りです．私たちのチームは、Mental Well-being
-              Intelligence研究を推進するために多様な専門知識を兼ね備えています。特に、人間・AI協調（human-AI
-              interaction）、メンタルヘルス技術、コミュニケーション支援、XR、ELSI、モバイルシステム、大規模なシステム実証、機械学習理論、心理学といった分野の専門性が集結しています。
-            </p>
-
-            <p></p>
-
-            <h2 class="wp-block-heading">Japan Principal Investigators</h2>
-
-            <div
-              class="wp-block-group is-style-section-3 has-global-padding is-content-justification-center is-layout-constrained wp-block-group-is-layout-constrained"
-              style="margin-top: 0; margin-bottom: 0"
+            <h2
+              class="wp-block-heading has-text-align-center text-balance has-text-color has-link-color wp-elements-8d66ace13def4e04ba854259024830a6"
+              style="
+                color: #fefefe;
+                margin-top: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+                margin-left: 0;
+                font-size: clamp(
+                  22.041px,
+                  1.378rem + ((1vw - 3.2px) * 1.586),
+                  36px
+                );
+              "
             >
-              <div
-                style="height: var(--wp--preset--spacing--40)"
-                aria-hidden="true"
-                class="wp-block-spacer"
-              ></div>
-
-              <div
-                class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-1 wp-block-columns-is-layout-flex"
-              >
-                <div
-                  class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                  style="flex-basis: 100%"
-                >
-                  <div
-                    class="wp-block-group is-layout-grid wp-container-core-group-is-layout-17 wp-block-group-is-layout-grid"
-                  >
-                    <div
-                      class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
-                    >
-                      <figure class="wp-block-image size-full">
-                        <a
-                          href="https://yatani.jp/"
-                          target="_blank"
-                          rel=" noreferrer noopener"
-                          ><img
-                            data-recalc-dims="1"
-                            fetchpriority="high"
-                            decoding="async"
-                            width="1333"
-                            height="1333"
-                            data-attachment-id="353"
-                            data-permalink="https://xinruifang50104eadf2.wpcomstaging.com/koji_yatani-3/"
-                            data-orig-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Koji_Yatani-edited-1.jpg?fit=1333%2C1333&amp;ssl=1"
-                            data-orig-size="1333,1333"
-                            data-comments-opened="1"
-                            data-image-meta='{"aperture":"2.8","credit":"","camera":"SIGMA fp","caption":"","created_timestamp":"1601894825","copyright":"","focal_length":"45","iso":"100","shutter_speed":"0.0125","title":"","orientation":"1"}'
-                            data-image-title="Koji_Yatani"
-                            data-image-description=""
-                            data-image-caption=""
-                            data-medium-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Koji_Yatani-edited-1.jpg?fit=300%2C300&amp;ssl=1"
-                            data-large-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Koji_Yatani-edited-1.jpg?fit=1024%2C1024&amp;ssl=1"
-                            src="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Koji_Yatani-edited-1.jpg?resize=1333%2C1333&#038;ssl=1"
-                            alt=""
-                            class="wp-image-353"
-                            style="aspect-ratio: 1; object-fit: cover"
-                            srcset="
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Koji_Yatani-edited-1.jpg?w=1333&amp;ssl=1             1333w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Koji_Yatani-edited-1.jpg?resize=300%2C300&amp;ssl=1    300w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Koji_Yatani-edited-1.jpg?resize=1024%2C1024&amp;ssl=1 1024w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Koji_Yatani-edited-1.jpg?resize=150%2C150&amp;ssl=1    150w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Koji_Yatani-edited-1.jpg?resize=768%2C768&amp;ssl=1    768w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Koji_Yatani-edited-1.jpg?resize=1200%2C1200&amp;ssl=1 1200w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Koji_Yatani-edited-1.jpg?resize=800%2C800&amp;ssl=1    800w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Koji_Yatani-edited-1.jpg?resize=600%2C600&amp;ssl=1    600w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Koji_Yatani-edited-1.jpg?resize=400%2C400&amp;ssl=1    400w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Koji_Yatani-edited-1.jpg?resize=200%2C200&amp;ssl=1    200w
-                            "
-                            sizes="(max-width: 1000px) 100vw, 1000px"
-                        /></a>
-                      </figure>
-
-                      <div
-                        class="wp-block-group is-layout-flow wp-container-core-group-is-layout-7 wp-block-group-is-layout-flow"
-                      >
-                        <h4 class="wp-block-heading has-small-font-size">
-                          Koji Yatani / 矢谷 浩司
-                        </h4>
-
-                        <p
-                          style="
-                            font-size: clamp(
-                              14px,
-                              0.875rem + ((1vw - 3.2px) * 0.114),
-                              15px
-                            );
-                          "
-                        >
-                          The University of Tokyo / 東京大学
-                        </p>
-                      </div>
-
-                      <div
-                        style="height: var(--wp--preset--spacing--20)"
-                        aria-hidden="true"
-                        class="wp-block-spacer"
-                      ></div>
-                    </div>
-
-                    <div
-                      class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
-                    >
-                      <figure class="wp-block-image size-full">
-                        <a
-                          href="https://hiranomarih.wixsite.com/hiranolab"
-                          target="_blank"
-                          rel=" noreferrer noopener"
-                          ><img
-                            data-recalc-dims="1"
-                            decoding="async"
-                            width="2027"
-                            height="2027"
-                            data-attachment-id="354"
-                            data-permalink="https://xinruifang50104eadf2.wpcomstaging.com/mari_hirano-3/"
-                            data-orig-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Mari_Hirano-edited-1.jpg?fit=2027%2C2027&amp;ssl=1"
-                            data-orig-size="2027,2027"
-                            data-comments-opened="1"
-                            data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}'
-                            data-image-title="Mari_Hirano"
-                            data-image-description=""
-                            data-image-caption=""
-                            data-medium-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Mari_Hirano-edited-1.jpg?fit=300%2C300&amp;ssl=1"
-                            data-large-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Mari_Hirano-edited-1.jpg?fit=1024%2C1024&amp;ssl=1"
-                            src="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Mari_Hirano-edited-1.jpg?resize=2027%2C2027&#038;ssl=1"
-                            alt=""
-                            class="wp-image-354"
-                            style="aspect-ratio: 1; object-fit: cover"
-                            srcset="
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Mari_Hirano-edited-1.jpg?w=2027&amp;ssl=1             2027w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Mari_Hirano-edited-1.jpg?resize=300%2C300&amp;ssl=1    300w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Mari_Hirano-edited-1.jpg?resize=1024%2C1024&amp;ssl=1 1024w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Mari_Hirano-edited-1.jpg?resize=150%2C150&amp;ssl=1    150w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Mari_Hirano-edited-1.jpg?resize=768%2C768&amp;ssl=1    768w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Mari_Hirano-edited-1.jpg?resize=1536%2C1536&amp;ssl=1 1536w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Mari_Hirano-edited-1.jpg?resize=1200%2C1200&amp;ssl=1 1200w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Mari_Hirano-edited-1.jpg?resize=800%2C800&amp;ssl=1    800w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Mari_Hirano-edited-1.jpg?resize=600%2C600&amp;ssl=1    600w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Mari_Hirano-edited-1.jpg?resize=400%2C400&amp;ssl=1    400w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Mari_Hirano-edited-1.jpg?resize=200%2C200&amp;ssl=1    200w
-                            "
-                            sizes="(max-width: 1000px) 100vw, 1000px"
-                        /></a>
-                      </figure>
-
-                      <div
-                        class="wp-block-group is-layout-flow wp-container-core-group-is-layout-9 wp-block-group-is-layout-flow"
-                      >
-                        <h3 class="wp-block-heading has-small-font-size">
-                          Mari Hirano / 平野 真理
-                        </h3>
-
-                        <p
-                          style="
-                            font-size: clamp(
-                              14px,
-                              0.875rem + ((1vw - 3.2px) * 0.114),
-                              15px
-                            );
-                          "
-                        >
-                          Ochanozumi University / お茶の水女子大学
-                        </p>
-                      </div>
-
-                      <div
-                        style="height: var(--wp--preset--spacing--20)"
-                        aria-hidden="true"
-                        class="wp-block-spacer"
-                      ></div>
-                    </div>
-
-                    <div
-                      class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
-                    >
-                      <figure class="wp-block-image size-full">
-                        <a
-                          href="https://www.riec.tohoku.ac.jp/~kitamura/"
-                          target="_blank"
-                          rel=" noreferrer noopener"
-                          ><img
-                            data-recalc-dims="1"
-                            decoding="async"
-                            width="1483"
-                            height="1483"
-                            data-attachment-id="356"
-                            data-permalink="https://xinruifang50104eadf2.wpcomstaging.com/yoshifumi_kitamura-3/"
-                            data-orig-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Yoshifumi_Kitamura-edited-1.jpg?fit=1483%2C1483&amp;ssl=1"
-                            data-orig-size="1483,1483"
-                            data-comments-opened="1"
-                            data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}'
-                            data-image-title="Yoshifumi_Kitamura"
-                            data-image-description=""
-                            data-image-caption=""
-                            data-medium-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Yoshifumi_Kitamura-edited-1.jpg?fit=300%2C300&amp;ssl=1"
-                            data-large-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Yoshifumi_Kitamura-edited-1.jpg?fit=1024%2C1024&amp;ssl=1"
-                            src="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Yoshifumi_Kitamura-edited-1.jpg?resize=1483%2C1483&#038;ssl=1"
-                            alt=""
-                            class="wp-image-356"
-                            style="aspect-ratio: 1; object-fit: cover"
-                            srcset="
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Yoshifumi_Kitamura-edited-1.jpg?w=1483&amp;ssl=1             1483w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Yoshifumi_Kitamura-edited-1.jpg?resize=300%2C300&amp;ssl=1    300w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Yoshifumi_Kitamura-edited-1.jpg?resize=1024%2C1024&amp;ssl=1 1024w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Yoshifumi_Kitamura-edited-1.jpg?resize=150%2C150&amp;ssl=1    150w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Yoshifumi_Kitamura-edited-1.jpg?resize=768%2C768&amp;ssl=1    768w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Yoshifumi_Kitamura-edited-1.jpg?resize=1200%2C1200&amp;ssl=1 1200w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Yoshifumi_Kitamura-edited-1.jpg?resize=800%2C800&amp;ssl=1    800w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Yoshifumi_Kitamura-edited-1.jpg?resize=600%2C600&amp;ssl=1    600w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Yoshifumi_Kitamura-edited-1.jpg?resize=400%2C400&amp;ssl=1    400w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Yoshifumi_Kitamura-edited-1.jpg?resize=200%2C200&amp;ssl=1    200w
-                            "
-                            sizes="(max-width: 1000px) 100vw, 1000px"
-                        /></a>
-                      </figure>
-
-                      <div
-                        class="wp-block-group is-layout-flow wp-container-core-group-is-layout-11 wp-block-group-is-layout-flow"
-                      >
-                        <h3 class="wp-block-heading has-small-font-size">
-                          Yoshifumi Kitamura / 北村 喜文
-                        </h3>
-
-                        <p
-                          style="
-                            font-size: clamp(
-                              14px,
-                              0.875rem + ((1vw - 3.2px) * 0.114),
-                              15px
-                            );
-                          "
-                        >
-                          Tohoku University / 東北大学
-                        </p>
-                      </div>
-
-                      <div
-                        style="height: var(--wp--preset--spacing--20)"
-                        aria-hidden="true"
-                        class="wp-block-spacer"
-                      ></div>
-                    </div>
-
-                    <div
-                      class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
-                    >
-                      <figure class="wp-block-image size-full">
-                        <a
-                          href="https://www.ms.k.u-tokyo.ac.jp/sugi/index-jp.html"
-                          target="_blank"
-                          rel=" noreferrer noopener"
-                          ><img
-                            data-recalc-dims="1"
-                            loading="lazy"
-                            decoding="async"
-                            width="445"
-                            height="445"
-                            data-attachment-id="357"
-                            data-permalink="https://xinruifang50104eadf2.wpcomstaging.com/masashi_sugiyama-3/"
-                            data-orig-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Masashi_Sugiyama-edited-1.jpg?fit=445%2C445&amp;ssl=1"
-                            data-orig-size="445,445"
-                            data-comments-opened="1"
-                            data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}'
-                            data-image-title="Masashi_Sugiyama"
-                            data-image-description=""
-                            data-image-caption=""
-                            data-medium-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Masashi_Sugiyama-edited-1.jpg?fit=300%2C300&amp;ssl=1"
-                            data-large-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Masashi_Sugiyama-edited-1.jpg?fit=445%2C445&amp;ssl=1"
-                            src="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Masashi_Sugiyama-edited-1.jpg?resize=445%2C445&#038;ssl=1"
-                            alt=""
-                            class="wp-image-357"
-                            style="aspect-ratio: 1; object-fit: cover"
-                            srcset="
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Masashi_Sugiyama-edited-1.jpg?w=445&amp;ssl=1            445w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Masashi_Sugiyama-edited-1.jpg?resize=300%2C300&amp;ssl=1 300w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Masashi_Sugiyama-edited-1.jpg?resize=150%2C150&amp;ssl=1 150w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Masashi_Sugiyama-edited-1.jpg?resize=400%2C400&amp;ssl=1 400w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Masashi_Sugiyama-edited-1.jpg?resize=200%2C200&amp;ssl=1 200w
-                            "
-                            sizes="auto, (max-width: 445px) 100vw, 445px"
-                        /></a>
-                      </figure>
-
-                      <div
-                        class="wp-block-group is-layout-flow wp-container-core-group-is-layout-13 wp-block-group-is-layout-flow"
-                      >
-                        <h3 class="wp-block-heading has-small-font-size">
-                          Masashi Sugiyama / 杉山 将
-                        </h3>
-
-                        <p
-                          style="
-                            font-size: clamp(
-                              14px,
-                              0.875rem + ((1vw - 3.2px) * 0.114),
-                              15px
-                            );
-                          "
-                        >
-                          The University of Tokyo / 東京大学
-                        </p>
-                      </div>
-
-                      <div
-                        style="height: var(--wp--preset--spacing--20)"
-                        aria-hidden="true"
-                        class="wp-block-spacer"
-                      ></div>
-                    </div>
-
-                    <div
-                      class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
-                    >
-                      <figure class="wp-block-image size-full">
-                        <a
-                          href="http://naomi-yamashita.net/"
-                          target="_blank"
-                          rel=" noreferrer noopener"
-                          ><img
-                            data-recalc-dims="1"
-                            loading="lazy"
-                            decoding="async"
-                            width="519"
-                            height="483"
-                            data-attachment-id="358"
-                            data-permalink="https://xinruifang50104eadf2.wpcomstaging.com/naomi_yamashita-2/"
-                            data-orig-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Naomi_Yamashita-edited.jpg?fit=519%2C483&amp;ssl=1"
-                            data-orig-size="519,483"
-                            data-comments-opened="1"
-                            data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}'
-                            data-image-title="Naomi_Yamashita"
-                            data-image-description=""
-                            data-image-caption=""
-                            data-medium-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Naomi_Yamashita-edited.jpg?fit=300%2C279&amp;ssl=1"
-                            data-large-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Naomi_Yamashita-edited.jpg?fit=519%2C483&amp;ssl=1"
-                            src="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Naomi_Yamashita-edited.jpg?resize=519%2C483&#038;ssl=1"
-                            alt=""
-                            class="wp-image-358"
-                            style="aspect-ratio: 1; object-fit: cover"
-                            srcset="
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Naomi_Yamashita-edited.jpg?w=519&amp;ssl=1            519w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Naomi_Yamashita-edited.jpg?resize=300%2C279&amp;ssl=1 300w
-                            "
-                            sizes="auto, (max-width: 519px) 100vw, 519px"
-                        /></a>
-                      </figure>
-
-                      <div
-                        class="wp-block-group is-layout-flow wp-container-core-group-is-layout-15 wp-block-group-is-layout-flow"
-                      >
-                        <h3 class="wp-block-heading has-small-font-size">
-                          Naomi Yamashita / 山下 直美
-                        </h3>
-
-                        <p
-                          style="
-                            font-size: clamp(
-                              14px,
-                              0.875rem + ((1vw - 3.2px) * 0.114),
-                              15px
-                            );
-                          "
-                        >
-                          NTT
-                        </p>
-                      </div>
-
-                      <div
-                        style="height: var(--wp--preset--spacing--20)"
-                        aria-hidden="true"
-                        class="wp-block-spacer"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <h2 class="wp-block-heading">
-              International Principal Investigators
+              Converging UI, AI, and Psychology
             </h2>
 
-            <div
-              class="wp-block-group is-layout-grid wp-container-core-group-is-layout-29 wp-block-group-is-layout-grid"
+            <h2
+              class="wp-block-heading has-text-align-center text-balance has-text-color has-link-color wp-elements-bbaeefd8db57b53d671beb905b88968d"
+              style="
+                color: #fefefe;
+                margin-top: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+                margin-left: 0;
+                font-size: clamp(
+                  22.041px,
+                  1.378rem + ((1vw - 3.2px) * 1.586),
+                  36px
+                );
+              "
             >
-              <div
-                class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
-              >
-                <figure class="wp-block-image size-full">
-                  <a
-                    href="https://empathiccomputing.org/team/mark-billinghurst/"
-                    target="_blank"
-                    rel=" noreferrer noopener"
-                    ><img
-                      data-recalc-dims="1"
-                      loading="lazy"
-                      decoding="async"
-                      width="3873"
-                      height="3873"
-                      data-attachment-id="367"
-                      data-permalink="https://xinruifang50104eadf2.wpcomstaging.com/team/adobestock_632706537/"
-                      data-orig-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?fit=3873%2C3873&amp;ssl=1"
-                      data-orig-size="3873,3873"
-                      data-comments-opened="1"
-                      data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}'
-                      data-image-title="AdobeStock_632706537"
-                      data-image-description=""
-                      data-image-caption=""
-                      data-medium-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?fit=300%2C300&amp;ssl=1"
-                      data-large-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?fit=1024%2C1024&amp;ssl=1"
-                      src="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=3873%2C3873&#038;ssl=1"
-                      alt=""
-                      class="wp-image-367"
-                      style="aspect-ratio: 1; object-fit: cover"
-                      srcset="
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?w=3873&amp;ssl=1             3873w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=300%2C300&amp;ssl=1    300w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=1024%2C1024&amp;ssl=1 1024w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=150%2C150&amp;ssl=1    150w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=768%2C768&amp;ssl=1    768w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=1536%2C1536&amp;ssl=1 1536w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=2048%2C2048&amp;ssl=1 2048w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?w=3000&amp;ssl=1             3000w
-                      "
-                      sizes="auto, (max-width: 1000px) 100vw, 1000px"
-                  /></a>
-                </figure>
-
-                <div
-                  class="wp-block-group is-layout-flow wp-container-core-group-is-layout-19 wp-block-group-is-layout-flow"
-                >
-                  <h3 class="wp-block-heading has-small-font-size">
-                    Mark Billinghurst / マーク ビリングハースト
-                  </h3>
-
-                  <p
-                    style="
-                      font-size: clamp(
-                        14px,
-                        0.875rem + ((1vw - 3.2px) * 0.114),
-                        15px
-                      );
-                    "
-                  >
-                    University of South Austrialia / 南オーストラリア大学
-                  </p>
-                </div>
-
-                <div
-                  style="height: var(--wp--preset--spacing--20)"
-                  aria-hidden="true"
-                  class="wp-block-spacer"
-                ></div>
-              </div>
-
-              <div
-                class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
-              >
-                <figure class="wp-block-image size-full">
-                  <a
-                    href="https://tech.cornell.edu/people/tanzeem-choudhury/"
-                    target="_blank"
-                    rel=" noreferrer noopener"
-                    ><img
-                      data-recalc-dims="1"
-                      loading="lazy"
-                      decoding="async"
-                      width="3873"
-                      height="3873"
-                      data-attachment-id="367"
-                      data-permalink="https://xinruifang50104eadf2.wpcomstaging.com/team/adobestock_632706537/"
-                      data-orig-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?fit=3873%2C3873&amp;ssl=1"
-                      data-orig-size="3873,3873"
-                      data-comments-opened="1"
-                      data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}'
-                      data-image-title="AdobeStock_632706537"
-                      data-image-description=""
-                      data-image-caption=""
-                      data-medium-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?fit=300%2C300&amp;ssl=1"
-                      data-large-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?fit=1024%2C1024&amp;ssl=1"
-                      src="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=3873%2C3873&#038;ssl=1"
-                      alt=""
-                      class="wp-image-367"
-                      style="aspect-ratio: 1; object-fit: cover"
-                      srcset="
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?w=3873&amp;ssl=1             3873w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=300%2C300&amp;ssl=1    300w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=1024%2C1024&amp;ssl=1 1024w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=150%2C150&amp;ssl=1    150w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=768%2C768&amp;ssl=1    768w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=1536%2C1536&amp;ssl=1 1536w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=2048%2C2048&amp;ssl=1 2048w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?w=3000&amp;ssl=1             3000w
-                      "
-                      sizes="auto, (max-width: 1000px) 100vw, 1000px"
-                  /></a>
-                </figure>
-
-                <div
-                  class="wp-block-group is-layout-flow wp-container-core-group-is-layout-21 wp-block-group-is-layout-flow"
-                >
-                  <h3 class="wp-block-heading has-small-font-size">
-                    Tanzeem Choudhury / タンジーム チョウドリー
-                  </h3>
-
-                  <p
-                    style="
-                      font-size: clamp(
-                        14px,
-                        0.875rem + ((1vw - 3.2px) * 0.114),
-                        15px
-                      );
-                    "
-                  >
-                    Cornell Tech / コーネル工科大学
-                  </p>
-                </div>
-
-                <div
-                  style="height: var(--wp--preset--spacing--20)"
-                  aria-hidden="true"
-                  class="wp-block-spacer"
-                ></div>
-              </div>
-
-              <div
-                class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
-              >
-                <figure class="wp-block-image size-full">
-                  <a
-                    href="https://simohosio.com/"
-                    target="_blank"
-                    rel=" noreferrer noopener"
-                    ><img
-                      data-recalc-dims="1"
-                      loading="lazy"
-                      decoding="async"
-                      width="3873"
-                      height="3873"
-                      data-attachment-id="367"
-                      data-permalink="https://xinruifang50104eadf2.wpcomstaging.com/team/adobestock_632706537/"
-                      data-orig-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?fit=3873%2C3873&amp;ssl=1"
-                      data-orig-size="3873,3873"
-                      data-comments-opened="1"
-                      data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}'
-                      data-image-title="AdobeStock_632706537"
-                      data-image-description=""
-                      data-image-caption=""
-                      data-medium-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?fit=300%2C300&amp;ssl=1"
-                      data-large-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?fit=1024%2C1024&amp;ssl=1"
-                      src="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=3873%2C3873&#038;ssl=1"
-                      alt=""
-                      class="wp-image-367"
-                      style="aspect-ratio: 1; object-fit: cover"
-                      srcset="
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?w=3873&amp;ssl=1             3873w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=300%2C300&amp;ssl=1    300w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=1024%2C1024&amp;ssl=1 1024w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=150%2C150&amp;ssl=1    150w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=768%2C768&amp;ssl=1    768w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=1536%2C1536&amp;ssl=1 1536w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?resize=2048%2C2048&amp;ssl=1 2048w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_632706537.png?w=3000&amp;ssl=1             3000w
-                      "
-                      sizes="auto, (max-width: 1000px) 100vw, 1000px"
-                  /></a>
-                </figure>
-
-                <div
-                  class="wp-block-group is-layout-flow wp-container-core-group-is-layout-23 wp-block-group-is-layout-flow"
-                >
-                  <h3 class="wp-block-heading has-small-font-size">
-                    Simo Hosio / ホシオ シモ
-                  </h3>
-
-                  <p
-                    style="
-                      font-size: clamp(
-                        14px,
-                        0.875rem + ((1vw - 3.2px) * 0.114),
-                        15px
-                      );
-                    "
-                  >
-                    University of Oulu / オウル大学
-                  </p>
-                </div>
-
-                <div
-                  style="height: var(--wp--preset--spacing--20)"
-                  aria-hidden="true"
-                  class="wp-block-spacer"
-                ></div>
-              </div>
-
-              <div
-                class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
-              >
-                <figure class="wp-block-image size-full">
-                  <a
-                    href="https://www.nehakumar.org/"
-                    target="_blank"
-                    rel=" noreferrer noopener"
-                    ><img
-                      data-recalc-dims="1"
-                      loading="lazy"
-                      decoding="async"
-                      width="665"
-                      height="665"
-                      data-attachment-id="298"
-                      data-permalink="https://xinruifang50104eadf2.wpcomstaging.com/neha_kumar-2/"
-                      data-orig-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Neha_Kumar-edited.jpg?fit=665%2C665&amp;ssl=1"
-                      data-orig-size="665,665"
-                      data-comments-opened="1"
-                      data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}'
-                      data-image-title="Neha_Kumar"
-                      data-image-description=""
-                      data-image-caption=""
-                      data-medium-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Neha_Kumar-edited.jpg?fit=300%2C300&amp;ssl=1"
-                      data-large-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Neha_Kumar-edited.jpg?fit=665%2C665&amp;ssl=1"
-                      src="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Neha_Kumar-edited.jpg?resize=665%2C665&#038;ssl=1"
-                      alt=""
-                      class="wp-image-298"
-                      style="aspect-ratio: 1; object-fit: cover"
-                      srcset="
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Neha_Kumar-edited.jpg?w=665&amp;ssl=1            665w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Neha_Kumar-edited.jpg?resize=300%2C300&amp;ssl=1 300w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Neha_Kumar-edited.jpg?resize=150%2C150&amp;ssl=1 150w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Neha_Kumar-edited.jpg?resize=600%2C600&amp;ssl=1 600w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Neha_Kumar-edited.jpg?resize=400%2C400&amp;ssl=1 400w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Neha_Kumar-edited.jpg?resize=200%2C200&amp;ssl=1 200w
-                      "
-                      sizes="auto, (max-width: 665px) 100vw, 665px"
-                  /></a>
-                </figure>
-
-                <div
-                  class="wp-block-group is-layout-flow wp-container-core-group-is-layout-25 wp-block-group-is-layout-flow"
-                >
-                  <h3 class="wp-block-heading has-small-font-size">
-                    Neha Kumar / ネハ クマール
-                  </h3>
-
-                  <p
-                    style="
-                      font-size: clamp(
-                        14px,
-                        0.875rem + ((1vw - 3.2px) * 0.114),
-                        15px
-                      );
-                    "
-                  >
-                    Georgia Institute of Technology / ジョージア工科大学
-                  </p>
-                </div>
-
-                <div
-                  style="height: var(--wp--preset--spacing--20)"
-                  aria-hidden="true"
-                  class="wp-block-spacer"
-                ></div>
-              </div>
-
-              <div
-                class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
-              >
-                <figure class="wp-block-image size-full">
-                  <a
-                    href="https://tongliang-liu.github.io/"
-                    target="_blank"
-                    rel=" noreferrer noopener"
-                    ><img
-                      data-recalc-dims="1"
-                      loading="lazy"
-                      decoding="async"
-                      width="3294"
-                      height="2196"
-                      data-attachment-id="361"
-                      data-permalink="https://xinruifang50104eadf2.wpcomstaging.com/tongliang_liu-4/"
-                      data-orig-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Tongliang_Liu-edited-2.jpg?fit=3294%2C2196&amp;ssl=1"
-                      data-orig-size="3294,2196"
-                      data-comments-opened="1"
-                      data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}'
-                      data-image-title="Tongliang_Liu"
-                      data-image-description=""
-                      data-image-caption=""
-                      data-medium-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Tongliang_Liu-edited-2.jpg?fit=300%2C200&amp;ssl=1"
-                      data-large-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Tongliang_Liu-edited-2.jpg?fit=1024%2C683&amp;ssl=1"
-                      src="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Tongliang_Liu-edited-2.jpg?resize=3294%2C2196&#038;ssl=1"
-                      alt=""
-                      class="wp-image-361"
-                      style="aspect-ratio: 1; object-fit: cover"
-                      srcset="
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Tongliang_Liu-edited-2.jpg?w=3294&amp;ssl=1             3294w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Tongliang_Liu-edited-2.jpg?resize=300%2C200&amp;ssl=1    300w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Tongliang_Liu-edited-2.jpg?resize=1024%2C683&amp;ssl=1  1024w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Tongliang_Liu-edited-2.jpg?resize=768%2C512&amp;ssl=1    768w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Tongliang_Liu-edited-2.jpg?resize=1536%2C1024&amp;ssl=1 1536w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Tongliang_Liu-edited-2.jpg?resize=2048%2C1365&amp;ssl=1 2048w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Tongliang_Liu-edited-2.jpg?resize=1200%2C800&amp;ssl=1  1200w,
-                        https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Tongliang_Liu-edited-2.jpg?w=3000&amp;ssl=1             3000w
-                      "
-                      sizes="auto, (max-width: 1000px) 100vw, 1000px"
-                  /></a>
-                </figure>
-
-                <div
-                  class="wp-block-group is-layout-flow wp-container-core-group-is-layout-27 wp-block-group-is-layout-flow"
-                >
-                  <h3 class="wp-block-heading has-small-font-size">
-                    Tongliang Liu / トンリャン リウ
-                  </h3>
-
-                  <p
-                    style="
-                      font-size: clamp(
-                        14px,
-                        0.875rem + ((1vw - 3.2px) * 0.114),
-                        15px
-                      );
-                    "
-                  >
-                    University of Sydney / シドニー大学
-                  </p>
-                </div>
-
-                <div
-                  style="height: var(--wp--preset--spacing--20)"
-                  aria-hidden="true"
-                  class="wp-block-spacer"
-                ></div>
-              </div>
-            </div>
-
-            <h2 class="wp-block-heading">Research Members</h2>
-
-            <div
-              class="wp-block-group is-style-section-3 has-global-padding is-content-justification-center is-layout-constrained wp-block-group-is-layout-constrained"
-              style="margin-top: 0; margin-bottom: 0"
-            >
-              <div
-                style="height: var(--wp--preset--spacing--40)"
-                aria-hidden="true"
-                class="wp-block-spacer"
-              ></div>
-
-              <div
-                class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-2 wp-block-columns-is-layout-flex"
-              >
-                <div
-                  class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
-                  style="flex-basis: 100%"
-                >
-                  <div
-                    class="wp-block-group is-layout-grid wp-container-core-group-is-layout-32 wp-block-group-is-layout-grid"
-                  >
-                    <div
-                      class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
-                    >
-                      <figure class="wp-block-image size-full">
-                        <a
-                          href="https://takashiishida.github.io/"
-                          target="_blank"
-                          rel=" noreferrer noopener"
-                          ><img
-                            data-recalc-dims="1"
-                            loading="lazy"
-                            decoding="async"
-                            width="389"
-                            height="389"
-                            data-attachment-id="362"
-                            data-permalink="https://xinruifang50104eadf2.wpcomstaging.com/takashi_ishida-3/"
-                            data-orig-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Takashi_ishida-edited-1.jpg?fit=389%2C389&amp;ssl=1"
-                            data-orig-size="389,389"
-                            data-comments-opened="1"
-                            data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}'
-                            data-image-title="Takashi_ishida"
-                            data-image-description=""
-                            data-image-caption=""
-                            data-medium-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Takashi_ishida-edited-1.jpg?fit=300%2C300&amp;ssl=1"
-                            data-large-file="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Takashi_ishida-edited-1.jpg?fit=389%2C389&amp;ssl=1"
-                            src="https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Takashi_ishida-edited-1.jpg?resize=389%2C389&#038;ssl=1"
-                            alt=""
-                            class="wp-image-362"
-                            style="aspect-ratio: 1; object-fit: cover"
-                            srcset="
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Takashi_ishida-edited-1.jpg?w=389&amp;ssl=1            389w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Takashi_ishida-edited-1.jpg?resize=300%2C300&amp;ssl=1 300w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Takashi_ishida-edited-1.jpg?resize=150%2C150&amp;ssl=1 150w,
-                              https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/Takashi_ishida-edited-1.jpg?resize=200%2C200&amp;ssl=1 200w
-                            "
-                            sizes="auto, (max-width: 389px) 100vw, 389px"
-                        /></a>
-                      </figure>
-
-                      <div
-                        class="wp-block-group is-layout-flow wp-container-core-group-is-layout-30 wp-block-group-is-layout-flow"
-                      >
-                        <h4 class="wp-block-heading has-small-font-size">
-                          Takashi Ishida / 石田隆
-                        </h4>
-
-                        <p
-                          style="
-                            font-size: clamp(
-                              14px,
-                              0.875rem + ((1vw - 3.2px) * 0.114),
-                              15px
-                            );
-                          "
-                        >
-                          The University of Tokyo / 東京大学
-                        </p>
-                      </div>
-
-                      <div
-                        style="height: var(--wp--preset--spacing--20)"
-                        aria-hidden="true"
-                        class="wp-block-spacer"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                style="height: var(--wp--preset--spacing--40)"
-                aria-hidden="true"
-                class="wp-block-spacer"
-              ></div>
-            </div>
+              to Transform Mental Well-being Research
+            </h2>
           </div>
-        </div>
 
+          <div
+            style="height: var(--wp--preset--spacing--70)"
+            aria-hidden="true"
+            class="wp-block-spacer"
+          ></div>
+        </div>
+      </div>
+
+      <div
+        class="wp-block-group alignfull is-style-default has-global-padding is-content-justification-center is-layout-constrained wp-block-group-is-layout-constrained"
+        style="margin-top: 0; margin-bottom: 0"
+      >
         <div
           style="height: 100px"
           aria-hidden="true"
           class="wp-block-spacer"
         ></div>
-      </div>
 
-      <footer class="alignfull wp-block-template-part">
-        <footer class="wp-block-template-part">
+        <h1 class="wp-block-heading alignwide has-text-align-left">
+          Our Vision
+        </h1>
+
+        <div
+          class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-1 wp-block-columns-is-layout-flex"
+        >
           <div
-            class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
+            class="wp-block-column is-layout-flow wp-container-core-column-is-layout-1 wp-block-column-is-layout-flow"
+            style="flex-basis: 42.5%"
           >
             <div
-              class="wp-block-group alignfull has-tertiary-background-color has-background has-global-padding is-layout-constrained wp-container-core-group-is-layout-38 wp-block-group-is-layout-constrained"
-              style="
-                padding-top: 20px;
-                padding-right: 40px;
-                padding-bottom: 20px;
-                padding-left: 40px;
-              "
+              style="height: 28px"
+              aria-hidden="true"
+              class="wp-block-spacer"
+            ></div>
+
+            <p class="has-text-align-justify">
+              本研究イニシアティブは，人の心理的健康に対する深い理解を定量的・定性的データの複合分析で実現し，ウェルビーイングを支援・促進する情報技術の研究開発と実社会への展開を目指す「Mental
+              Well-being Intelligence
+              (MWI)」コミュニティの構築を目指すものです．さらに次世代育成として，臨床心理学の素養を備え，心理的健康に対する情報学研究を行う心理健康情報学者と，情報システムのプロトタイピング能力と定量的データ分析手法を身につけ，臨床心理の研究と現場で活躍する情報臨床心理学者という，人の心理的健康という国際的課題に真正面から立ち向かえる2種類の研究者の養成を目指しています．​​<br />
+            </p>
+          </div>
+
+          <div
+            class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+            style="padding-left: 0px; flex-basis: 50%"
+          >
+            <div
+              style="height: var(--wp--preset--spacing--20)"
+              aria-hidden="true"
+              class="wp-block-spacer"
+            ></div>
+
+            <p class="has-text-align-left">
+              This research initiative aims to establish a research community of
+              Mental Well-being Intelligence (MWI), which strives to achieve a
+              deep understanding of human mental health through the combined
+              analysis of quantitative and qualitative data. MWI also aims to
+              accelerate the development and deployment of technology to enhance
+              mental well-being. We also aim at developing two types of
+              next-generation researchers: Mental Health Computer Scientists,
+              who are equipped with clinical psychological knowledge and conduct
+              computer science research on mental health; and Information
+              Psychologists, who hold prototyping capabilities for information
+              systems and quantitative data analysis methods and bring them to
+              the field of clinical psychology. These researchers will become
+              the key players to directly address the global challenge of human
+              mental health.&nbsp;
+            </p>
+          </div>
+        </div>
+
+        <div
+          style="height: 50px"
+          aria-hidden="true"
+          class="wp-block-spacer"
+        ></div>
+
+        <hr class="wp-block-separator aligncenter has-alpha-channel-opacity" />
+
+        <div
+          class="wp-block-group alignfull is-style-default has-global-padding is-content-justification-center is-layout-constrained wp-block-group-is-layout-constrained"
+          style="margin-top: 0; margin-bottom: 0"
+        >
+          <div
+            style="height: var(--wp--preset--spacing--50)"
+            aria-hidden="true"
+            class="wp-block-spacer"
+          ></div>
+
+          <h1 class="wp-block-heading alignwide has-text-align-left">
+            Our Team
+          </h1>
+
+          <div
+            class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-2 wp-block-columns-is-layout-flex"
+          >
+            <div
+              class="wp-block-column is-layout-flow wp-container-core-column-is-layout-3 wp-block-column-is-layout-flow"
+              style="flex-basis: 50%"
             >
-              <footer
-                class="wp-block-group alignfull has-global-padding is-content-justification-center is-layout-constrained wp-container-core-group-is-layout-37 wp-block-group-is-layout-constrained"
-                style="
-                  margin-top: 0;
-                  margin-bottom: 0;
-                  padding-top: calc(
-                    0.5 *
-                      var(
-                        --wp--style--root--padding-right,
-                        var(--wp--custom--gap--horizontal)
-                      )
-                  );
-                  padding-right: var(
-                    --wp--style--root--padding-right,
-                    var(--wp--custom--gap--horizontal)
-                  );
-                  padding-bottom: calc(
-                    0.5 *
-                      var(
-                        --wp--style--root--padding-right,
-                        var(--wp--custom--gap--horizontal)
-                      )
-                  );
-                  padding-left: var(
-                    --wp--style--root--padding-left,
-                    var(--wp--custom--gap--horizontal)
-                  );
-                "
-              >
-                <div
-                  class="wp-block-group has-global-padding is-content-justification-center is-layout-constrained wp-block-group-is-layout-constrained"
-                >
-                  <p class="has-text-align-center">
-                    <strong>ASPIRE Mental Well-being Intelligence</strong>
-                  </p>
+              <div
+                style="height: 24px"
+                aria-hidden="true"
+                class="wp-block-spacer"
+              ></div>
 
-                  <p class="has-text-align-center">
-                    Contact: contact [at] aspire-mwi.org
-                  </p>
+              <p>
+                本研究イニシアティブは，JST TopのためのASPIRE（課題名：「Mental
+                Well-being
+                Intelligence：人の心理的健康に関するデータ駆動的研究コミュニティ」）により支援されており，東京大学，東北大学，お茶の水女子大学，NTT，コーネル工科大学（アメリカ），ジョージア工科大学（アメリカ），シドニー大学（オーストラリア），南オーストラリア大学（オーストラリア），オウル大学（フィンランド）を中心とした世界中の研究者が参画しています．​全チームメンバーは<a
+                  href="./team/index.html"
+                  data-type="page"
+                  data-id="53"
+                  >こちら</a
+                >．<br />
+              </p>
+            </div>
 
-                  <ul
-                    class="wp-block-social-links is-style-logos-only is-content-justification-center is-layout-flex wp-container-core-social-links-is-layout-1 wp-block-social-links-is-layout-flex"
-                  >
-                    <li
-                      class="wp-social-link wp-social-link-instagram wp-block-social-link"
-                    >
-                      <a href="https://#" class="wp-block-social-link-anchor"
-                        ><svg
-                          width="24"
-                          height="24"
-                          viewbox="0 0 24 24"
-                          version="1.1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          aria-hidden="true"
-                          focusable="false"
-                        >
-                          <path
-                            d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z"
-                          ></path></svg
-                        ><span
-                          class="wp-block-social-link-label screen-reader-text"
-                          >Instagram</span
-                        ></a
-                      >
-                    </li>
-                  </ul>
+            <div
+              class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+              style="padding-left: 0px; flex-basis: 50%"
+            >
+              <div
+                style="height: var(--wp--preset--spacing--20)"
+                aria-hidden="true"
+                class="wp-block-spacer"
+              ></div>
 
-                  <p class="has-text-align-center has-small-font-size">
-                    All right reserved.
-                  </p>
-                </div>
-              </footer>
+              <p>
+                This research initiative is supported by JST ASPIRE FOR TOP
+                SCIENTISTS (Project: Mental Well-being Intelligence: A Community
+                for Data-driven Mental Well-being Research). This research
+                initiative includes researchers all over the world mainly from
+                the following institutions: The University of Tokyo, Tohoku
+                University, Ochanomizu University, NTT, Cornell Tech, Georgia
+                Institute of Technology, University of Oulu, University of South
+                Australia, and University of Sydney. You may see all members in
+                <a href="./team/index.html" data-type="page" data-id="53"
+                  >our Team page.</a
+                ><br /><br />
+              </p>
             </div>
           </div>
-        </footer>
+
+          <div
+            style="height: 100px"
+            aria-hidden="true"
+            class="wp-block-spacer"
+          ></div>
+
+          <hr
+            class="wp-block-separator aligncenter has-alpha-channel-opacity"
+          />
+        </div>
+      </div>
+
+      <div
+        style="height: 50px"
+        aria-hidden="true"
+        class="wp-block-spacer"
+      ></div>
+
+      <figure class="wp-block-image aligncenter size-full is-resized">
+        <img
+          width="948"
+          height="295"
+          src="./wp-content/uploads/2024/11/logo.png"
+          alt=""
+          class="wp-image-195"
+          style="width: 252px; height: auto"
+          srcset="
+            https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/logo.png?w=948&amp;ssl=1            948w,
+            https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/logo.png?resize=300%2C93&amp;ssl=1  300w,
+            https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/logo.png?resize=768%2C239&amp;ssl=1 768w
+          "
+          sizes="(max-width: 948px) 100vw, 948px"
+        />
+      </figure>
+
+      <div
+        style="height: 50px"
+        aria-hidden="true"
+        class="wp-block-spacer"
+      ></div>
+
+      <div
+        class="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-10 wp-block-group-is-layout-constrained"
+        style="
+          padding-top: 80px;
+          padding-right: 40px;
+          padding-bottom: 80px;
+          padding-left: 40px;
+        "
+      >
+        <div
+          class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-3 wp-block-columns-is-layout-flex"
+        >
+          <div
+            class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+          >
+            <figure class="wp-block-image size-full is-style-default">
+              <img
+                width="4443"
+                height="4443"
+                src="./wp-content/uploads/2024/11/AdobeStock_542860092-edited.jpeg"
+                alt=""
+                class="wp-image-414"
+                srcset="
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_542860092-edited.jpeg?w=4443&amp;ssl=1             4443w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_542860092-edited.jpeg?resize=300%2C300&amp;ssl=1    300w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_542860092-edited.jpeg?resize=1024%2C1024&amp;ssl=1 1024w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_542860092-edited.jpeg?resize=150%2C150&amp;ssl=1    150w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_542860092-edited.jpeg?resize=768%2C768&amp;ssl=1    768w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_542860092-edited.jpeg?resize=1536%2C1536&amp;ssl=1 1536w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_542860092-edited.jpeg?resize=2048%2C2048&amp;ssl=1 2048w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_542860092-edited.jpeg?resize=1200%2C1200&amp;ssl=1 1200w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_542860092-edited.jpeg?resize=800%2C800&amp;ssl=1    800w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_542860092-edited.jpeg?resize=600%2C600&amp;ssl=1    600w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_542860092-edited.jpeg?resize=400%2C400&amp;ssl=1    400w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_542860092-edited.jpeg?resize=200%2C200&amp;ssl=1    200w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_542860092-edited.jpeg?w=3000&amp;ssl=1             3000w
+                "
+                sizes="(max-width: 4443px) 100vw, 4443px"
+              />
+            </figure>
+
+            <h2 class="wp-block-heading has-medium-font-size">
+              <a href="./projects/index.html" data-type="page" data-id="107"
+                >Projects</a
+              >
+            </h2>
+          </div>
+
+          <div
+            class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+          >
+            <figure class="wp-block-image size-large">
+              <img
+                width="4063"
+                height="4060"
+                src="./wp-content/uploads/2024/11/AdobeStock_400811033-edited-1.jpeg"
+                alt=""
+                class="wp-image-410"
+                srcset="
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_400811033-edited-1.jpeg?w=4063&amp;ssl=1             4063w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_400811033-edited-1.jpeg?resize=300%2C300&amp;ssl=1    300w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_400811033-edited-1.jpeg?resize=1024%2C1024&amp;ssl=1 1024w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_400811033-edited-1.jpeg?resize=150%2C150&amp;ssl=1    150w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_400811033-edited-1.jpeg?resize=768%2C767&amp;ssl=1    768w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_400811033-edited-1.jpeg?resize=1536%2C1536&amp;ssl=1 1536w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_400811033-edited-1.jpeg?resize=2048%2C2046&amp;ssl=1 2048w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_400811033-edited-1.jpeg?resize=1200%2C1199&amp;ssl=1 1200w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_400811033-edited-1.jpeg?resize=800%2C800&amp;ssl=1    800w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_400811033-edited-1.jpeg?resize=600%2C600&amp;ssl=1    600w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_400811033-edited-1.jpeg?resize=400%2C400&amp;ssl=1    400w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_400811033-edited-1.jpeg?resize=200%2C200&amp;ssl=1    200w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_400811033-edited-1.jpeg?w=3000&amp;ssl=1             3000w
+                "
+                sizes="(max-width: 4063px) 100vw, 4063px"
+              />
+            </figure>
+
+            <h2 class="wp-block-heading has-medium-font-size">
+              <a
+                href="./mwi-vision-talks/index.html"
+                data-type="page"
+                data-id="401"
+                >MWI Vision Lectures</a
+              >
+            </h2>
+          </div>
+
+          <div
+            class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"
+          >
+            <figure class="wp-block-image size-full">
+              <img
+                width="3744"
+                height="3744"
+                src="./wp-content/uploads/2024/11/AdobeStock_79568047-edited.jpeg"
+                alt=""
+                class="wp-image-412"
+                srcset="
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_79568047-edited.jpeg?w=3744&amp;ssl=1             3744w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_79568047-edited.jpeg?resize=300%2C300&amp;ssl=1    300w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_79568047-edited.jpeg?resize=1024%2C1024&amp;ssl=1 1024w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_79568047-edited.jpeg?resize=150%2C150&amp;ssl=1    150w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_79568047-edited.jpeg?resize=768%2C768&amp;ssl=1    768w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_79568047-edited.jpeg?resize=1536%2C1536&amp;ssl=1 1536w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_79568047-edited.jpeg?resize=2048%2C2048&amp;ssl=1 2048w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_79568047-edited.jpeg?resize=1200%2C1200&amp;ssl=1 1200w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_79568047-edited.jpeg?resize=800%2C800&amp;ssl=1    800w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_79568047-edited.jpeg?resize=600%2C600&amp;ssl=1    600w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_79568047-edited.jpeg?resize=400%2C400&amp;ssl=1    400w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_79568047-edited.jpeg?resize=200%2C200&amp;ssl=1    200w,
+                  https://i0.wp.com/xinruifang50104eadf2.wpcomstaging.com/wp-content/uploads/2024/11/AdobeStock_79568047-edited.jpeg?w=3000&amp;ssl=1             3000w
+                "
+                sizes="(max-width: 3744px) 100vw, 3744px"
+              />
+            </figure>
+
+            <h2 class="wp-block-heading has-medium-font-size">
+              <a href="./events/index.html" data-type="page" data-id="331"
+                >Events</a
+              >
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="wp-block-group alignfull has-global-padding is-content-justification-center is-layout-constrained wp-container-core-group-is-layout-11 wp-block-group-is-layout-constrained"
+        style="
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: calc(
+            0.5 *
+              var(
+                --wp--style--root--padding-right,
+                var(--wp--custom--gap--horizontal)
+              )
+          );
+          padding-right: var(
+            --wp--style--root--padding-right,
+            var(--wp--custom--gap--horizontal)
+          );
+          padding-bottom: calc(
+            0.5 *
+              var(
+                --wp--style--root--padding-right,
+                var(--wp--custom--gap--horizontal)
+              )
+          );
+          padding-left: var(
+            --wp--style--root--padding-left,
+            var(--wp--custom--gap--horizontal)
+          );
+        "
+      >
+        <div
+          style="
+            height: calc(
+              0.25 *
+                var(
+                  --wp--style--root--padding-right,
+                  var(--wp--custom--gap--horizontal)
+                )
+            );
+          "
+          aria-hidden="true"
+          class="wp-block-spacer"
+        ></div>
+
+        <div
+          class="wp-block-columns alignwide are-vertically-aligned-top has-global-padding is-content-justification-left is-layout-constrained wp-container-core-columns-is-layout-4 wp-block-columns-is-layout-constrained"
+        >
+          <div
+            class="wp-block-column is-vertically-aligned-top has-x-large-font-size is-layout-flow wp-block-column-is-layout-flow"
+            style="
+              padding-right: var(--wp--preset--spacing--30);
+              flex-basis: 45%;
+            "
+          >
+            <h2 class="wp-block-heading has-x-large-font-size">News</h2>
+          </div>
+
+          <div
+            class="wp-block-column is-vertically-aligned-top is-layout-flow wp-block-column-is-layout-flow"
+            style="flex-basis: 55%"
+          >
+            <div
+              class="wp-block-query is-layout-flow wp-block-query-is-layout-flow"
+            >
+              <hr class="wp-block-separator has-alpha-channel-opacity" />
+
+              <div class="wp-block-query-no-results">
+                <p>Coming soon.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="
+            height: calc(
+              0.25 *
+                var(
+                  --wp--style--root--padding-right,
+                  var(--wp--custom--gap--horizontal)
+                )
+            );
+          "
+          aria-hidden="true"
+          class="wp-block-spacer"
+        ></div>
+      </div>
+
+      <footer class="wp-block-template-part">
+        <div
+          class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"
+        >
+          <div
+            class="wp-block-group alignfull has-tertiary-background-color has-background has-global-padding is-layout-constrained wp-container-core-group-is-layout-14 wp-block-group-is-layout-constrained"
+            style="
+              padding-top: 20px;
+              padding-right: 40px;
+              padding-bottom: 20px;
+              padding-left: 40px;
+            "
+          >
+            <footer
+              class="wp-block-group alignfull has-global-padding is-content-justification-center is-layout-constrained wp-container-core-group-is-layout-13 wp-block-group-is-layout-constrained"
+              style="
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-top: calc(
+                  0.5 *
+                    var(
+                      --wp--style--root--padding-right,
+                      var(--wp--custom--gap--horizontal)
+                    )
+                );
+                padding-right: var(
+                  --wp--style--root--padding-right,
+                  var(--wp--custom--gap--horizontal)
+                );
+                padding-bottom: calc(
+                  0.5 *
+                    var(
+                      --wp--style--root--padding-right,
+                      var(--wp--custom--gap--horizontal)
+                    )
+                );
+                padding-left: var(
+                  --wp--style--root--padding-left,
+                  var(--wp--custom--gap--horizontal)
+                );
+              "
+            >
+              <div
+                class="wp-block-group has-global-padding is-content-justification-center is-layout-constrained wp-block-group-is-layout-constrained"
+              >
+                <p class="has-text-align-center">
+                  <strong>ASPIRE Mental Well-being Intelligence</strong>
+                </p>
+
+                <p class="has-text-align-center">
+                  Contact: contact [at] aspire-mwi.org
+                </p>
+
+                <ul
+                  class="wp-block-social-links is-style-logos-only is-content-justification-center is-layout-flex wp-container-core-social-links-is-layout-1 wp-block-social-links-is-layout-flex"
+                >
+                  <li
+                    class="wp-social-link wp-social-link-instagram wp-block-social-link"
+                  >
+                    <a href="https://#" class="wp-block-social-link-anchor"
+                      ><svg
+                        width="24"
+                        height="24"
+                        viewbox="0 0 24 24"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <path
+                          d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z"
+                        ></path></svg
+                      ><span
+                        class="wp-block-social-link-label screen-reader-text"
+                        >Instagram</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+
+                <p class="has-text-align-center has-small-font-size">
+                  All right reserved.
+                </p>
+              </div>
+            </footer>
+          </div>
+        </div>
       </footer>
     </div>
     <!-- wpcom_wp_footer -->
@@ -3752,10 +3167,6 @@
       data-service="atomic"
       src="https://s0.wp.com/wp-content/js/bilmur.min.js?m=202448"
     ></script>
-    <div id="amp-mobile-version-switcher" hidden>
-      <a rel="" href="./index.html#038;amp=1"> Go to mobile version </a>
-    </div>
-
     <div id="jp-carousel-loading-overlay">
       <div id="jp-carousel-loading-wrapper">
         <span id="jp-carousel-library-loading">&nbsp;</span>
@@ -4097,58 +3508,6 @@
         </div>
       </div>
     </div>
-    <script id="jetpack-carousel-js-extra">
-      var jetpackSwiperLibraryPath = {
-        url: ".\/\/wp-content\/plugins\/jetpack\/_inc\/build\/carousel\/swiper-bundle.min.js",
-      };
-      var jetpackCarouselStrings = {
-        widths: [370, 700, 1000, 1200, 1400, 2000],
-        is_logged_in: "",
-        lang: "en",
-        ajaxurl: ".\/\/wp-admin\/admin-ajax.php",
-        nonce: "ab7dfbdba5",
-        display_exif: "1",
-        display_comments: "1",
-        single_image_gallery: "1",
-        single_image_gallery_media_file: "",
-        background_color: "black",
-        comment: "Comment",
-        post_comment: "Post Comment",
-        write_comment: "Write a Comment...",
-        loading_comments: "Loading Comments...",
-        image_label: "Open image in full-screen.",
-        download_original:
-          'View full size <span class="photo-size">{0}<span class="photo-size-times">×<\/span>{1}<\/span>',
-        no_comment_text:
-          "Please be sure to submit some text with your comment.",
-        no_comment_email: "Please provide an email address to comment.",
-        no_comment_author: "Please provide your name to comment.",
-        comment_post_error:
-          "Sorry, but there was an error posting your comment. Please try again later.",
-        comment_approved: "Your comment was approved.",
-        comment_unapproved: "Your comment is in moderation.",
-        camera: "Camera",
-        aperture: "Aperture",
-        shutter_speed: "Shutter Speed",
-        focal_length: "Focal Length",
-        copyright: "Copyright",
-        comment_registration: "0",
-        require_name_email: "1",
-        login_url: ".\/\/wp-login.php?redirect_to=.%2F%2Fteam%2F",
-        blog_id: "1",
-        meta_data: [
-          "camera",
-          "aperture",
-          "shutter_speed",
-          "focal_length",
-          "copyright",
-        ],
-      };
-    </script>
-    <script
-      type="text/javascript"
-      src="./../wp-content/plugins/jetpack/_inc/build/carousel/jetpack-carousel.min.js?m=1730206540"
-    ></script>
     <script id="wp-block-template-skip-link-js-after">
       (function () {
         var skipLinkTarget = document.querySelector("main"),
@@ -4189,8 +3548,55 @@
         sibling.parentElement.insertBefore(skipLink, sibling);
       })();
     </script>
-    <script type="text/javascript" src="../navBut.js"></script>
-
+    <script id="jetpack-carousel-js-extra">
+      var jetpackSwiperLibraryPath = {
+        url: ".\/\/wp-content\/plugins\/jetpack\/_inc\/build\/carousel\/swiper-bundle.min.js",
+      };
+      var jetpackCarouselStrings = {
+        widths: [370, 700, 1000, 1200, 1400, 2000],
+        is_logged_in: "",
+        lang: "en",
+        ajaxurl: ".\/\/wp-admin\/admin-ajax.php",
+        nonce: "ab7dfbdba5",
+        display_exif: "1",
+        display_comments: "1",
+        single_image_gallery: "1",
+        single_image_gallery_media_file: "",
+        background_color: "black",
+        comment: "Comment",
+        post_comment: "Post Comment",
+        write_comment: "Write a Comment...",
+        loading_comments: "Loading Comments...",
+        image_label: "Open image in full-screen.",
+        download_original:
+          'View full size <span class="photo-size">{0}<span class="photo-size-times">×<\/span>{1}<\/span>',
+        no_comment_text:
+          "Please be sure to submit some text with your comment.",
+        no_comment_email: "Please provide an email address to comment.",
+        no_comment_author: "Please provide your name to comment.",
+        comment_post_error:
+          "Sorry, but there was an error posting your comment. Please try again later.",
+        comment_approved: "Your comment was approved.",
+        comment_unapproved: "Your comment is in moderation.",
+        camera: "Camera",
+        aperture: "Aperture",
+        shutter_speed: "Shutter Speed",
+        focal_length: "Focal Length",
+        copyright: "Copyright",
+        comment_registration: "0",
+        require_name_email: "1",
+        login_url: ".\/\/wp-login.php",
+        blog_id: "1",
+        meta_data: [
+          "camera",
+          "aperture",
+          "shutter_speed",
+          "focal_length",
+          "copyright",
+        ],
+      };
+    </script>
+    <script type="text/javascript" src="./navBut.js"></script>
     <script
       src="https://stats.wp.com/e-202448.js"
       id="jetpack-stats-js"
@@ -4201,10 +3607,10 @@
       _stq.push([
         "view",
         JSON.parse(
-          '{"v":"ext","blog":"238298897","post":"53","tz":"9","srv":"xinruifang50104eadf2.wpcomstaging.com","hp":"atomic","ac":"2","amp":"0","j":"1:14.1-a.3"}'
+          '{"v":"ext","blog":"238298897","post":"0","tz":"9","srv":"xinruifang50104eadf2.wpcomstaging.com","hp":"atomic","ac":"2","amp":"0","j":"1:14.1-a.3"}'
         ),
       ]);
-      _stq.push(["clickTrackerInit", "238298897", "53"]);
+      _stq.push(["clickTrackerInit", "238298897", "0"]);
     </script>
   </body>
 </html>
